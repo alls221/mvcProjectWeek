@@ -1,0 +1,59 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url(http://images.containerstore.com/medialibrary/images/tcsclosets/slideshow/Image09-TCSClosets-960.jpg),no-repeat,center,fixed;
+    background-size:cover;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/*Custom css*/
+
+/*Home Index*/
+.h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+.jumbotron {
+    background: url(http://images.containerstore.com/medialibrary/images/tcsclosets/slideshow/Image09-TCSClosets-960.jpg),no-repeat,center,fixed;
+    background-size:cover;
+    text-align: center;
+    font-size: 200px;
+    color: #FFCA56;
+}
+/*Carousel*/
+.carousel-inner > .item > img {
+    margin: 0 auto;
+    background-color: #A5531B;
+}
+
+/*Navbar*/
+.navbar {
+    background-color: #A5531B;
+}
+
+.navbar-default .navbar-brand {
+    text-decoration:none!important;
+    color: #FFCA56 !important;
+    font-family: 'Pacifico', cursive;
+    font-size: 45px;
+    
+}

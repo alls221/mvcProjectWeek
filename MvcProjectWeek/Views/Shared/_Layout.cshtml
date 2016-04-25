@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="form-horizontal">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"><font color="#FFCA56!imporant" face="Pacifico" size="50"> @Html.ActionLink("My Closet", "Index", "Home")</font> </a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><font color="#FFCA56">Navigate Closet Section</font> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Tops", "Index", "Tops")</li>
+                                <li>@Html.ActionLink("Bottoms", "Index", "Bottoms")</li>
+                                <li>@Html.ActionLink("Accesories", "Index", "Accesories")</li>
+                                <li>@Html.ActionLink("Shoes", "Index", "Shoes")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        </div>
+        @RenderBody()
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+        <footer class="footer">
+            <div class="dropup">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Add Items to your Closet: <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Tops", "Create", "Tops")</li>
+                            <li>@Html.ActionLink("Bottoms", "Create", "Bottoms")</li>
+                            <li>@Html.ActionLink("Accesories", "Create", "Accesories")</li>
+                            <li>@Html.ActionLink("Shoes", "Create", "Shoes")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+</body>
+</html>

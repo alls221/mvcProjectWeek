@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MvcProjectWeek.Models.Accesories>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Accesories</h2>
+
+
+@foreach (var item in Model)
+{
+    <div class="container,col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="@Html.DisplayFor(modelItem => item.Photo)" width="200" height="200" />
+            <div class="caption">
+                <h3>@Html.DisplayFor(modelItem => item.Nickname)</h3>
+                <p>@Html.DisplayFor(modelItem => item.Type)</p>
+                <p>@Html.DisplayFor(modelItem => item.Color)</p>
+                <p>@Html.DisplayFor(modelItem => item.Season)</p>
+                <p>@Html.DisplayFor(modelItem => item.Occasion)</p>
+                <p class="btn btn-default" role="button">@Html.ActionLink("Edit", "Edit", new { id = item.AccesoriesId })
+                <p class="btn btn-default" role="button">@Html.ActionLink("Delete", "Delete", new { id = item.AccesoriesId })
+                <p class="btn btn-default" role="button">@Html.ActionLink("Details", "Details", new { id = item.AccesoriesId })
+            </div>
+        </div>
+    </div>
+}
